@@ -4,8 +4,6 @@ import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 
-const PORT = 4000;
-
 const app = express();
 const logger = morgan("dev");
 
@@ -17,6 +15,4 @@ app.use("/", globalRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
 
-const handleListening = () => console.log("sever listening on port 4000");
-
-app.listen(PORT, handleListening);
+export default app;

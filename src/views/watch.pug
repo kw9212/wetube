@@ -1,9 +1,9 @@
 extends base.pug
 
-block content 
-    h1=video.title
-    if video.views != 1
-        h3 #{video.views} views
-    else 
-        h3 #{video.views} view
+block content
+    div
+        p=video.description
+        small=video.createdAt
     a(href=`${video.id}/edit`) Edit Video &rarr;
+    <br>
+    a(href=`${video.id}/delete`) Delete Video &rarr;
